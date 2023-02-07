@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('second');
+    return view('main');
+});
+Route::get('/admin', function () {
+    return view('app');
 });
