@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,10 +8,21 @@
     <title>Document</title>
     @yield('styles')
 </head>
-<body>
-@include('navbar')
+<body class="layout-boxed">
 
-@include('sidebar')
+@include('layouts.AdminDashboard.navbar')
+
+<div class="main-container" id="container">
+    <div class="overlay"></div>
+    <div class="cs-overlay"></div>
+    <div class="search-overlay"></div>
+
+    @include('layouts.AdminDashboard.sidebar')
+
+    <div id="content" class="main-content">
+        @yield('content')
+    </div>
+</div>
 
 @yield('scripts')
 </body>

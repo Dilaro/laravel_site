@@ -1,19 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic"
-          rel="stylesheet" type="text/css">
-    @section('styles')
-    @vite(['resources/admin_panel_style/css/bootstrap.min.css', 'resources/admin_panel_style/css/plugins.css', 'resources/admin_panel_style/css/mailing-chat.css'])
-    @endsection
-</head>
-<body class="sidebar-noneoverflow">
+@section('styles')
+@vite(['resources/admin_panel_style/css/bootstrap.min.css', 'resources/admin_panel_style/css/plugins.css',
+       'resources/admin_panel_style/css/mailing-chat.css', 'resources/admin_panel_style/css/structure.css'])
+@show
+
 @section('navbar')
 <!--  BEGIN NAVBAR  -->
 <div class="header-container fixed-top">
@@ -42,13 +31,13 @@
         <ul class="navbar-item flex-row navbar-dropdown">
             <li class="nav-item dropdown language-dropdown more-dropdown">
                 <div class="dropdown  custom-dropdown-icon">
-                    <a class="dropdown-toggle btn" href="#" role="button" id="customDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/flag-ca.svg" class="flag-width" alt="flag"><span>English</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                    <a class="dropdown-toggle btn" href="#" role="button" id="customDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ Vite::asset('resources/style/images/flag-ca.svg') }}" class="flag-width" alt="flag"><span>English</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="customDropdown">
-                        <a class="dropdown-item" data-img-value="flag-de" data-value="German" href="javascript:void(0);"><img src="assets/img/flag-de.svg" class="flag-width" alt="flag"> German</a>
-                        <a class="dropdown-item" data-img-value="flag-sp" data-value="Spanish" href="javascript:void(0);"><img src="assets/img/flag-sp.svg" class="flag-width" alt="flag"> Spanish</a>
-                        <a class="dropdown-item" data-img-value="flag-fr" data-value="French" href="javascript:void(0);"><img src="assets/img/flag-fr.svg" class="flag-width" alt="flag"> French</a>
-                        <a class="dropdown-item" data-img-value="flag-ca" data-value="English" href="javascript:void(0);"><img src="assets/img/flag-ca.svg" class="flag-width" alt="flag"> English</a>
+                        <a class="dropdown-item" data-img-value="flag-de" data-value="German" href="javascript:void(0);"><img src="{{ Vite::asset('resources/style/images/flag-de.svg') }}" class="flag-width" alt="flag"> German</a>
+                        <a class="dropdown-item" data-img-value="flag-sp" data-value="Spanish" href="javascript:void(0);"><img src="{{ Vite::asset('resources/style/images/flag-sp.svg') }}" class="flag-width" alt="flag"> Spanish</a>
+                        <a class="dropdown-item" data-img-value="flag-fr" data-value="French" href="javascript:void(0);"><img src="{{ Vite::asset('resources/style/images/flag-fr.svg') }}" class="flag-width" alt="flag"> French</a>
+                        <a class="dropdown-item" data-img-value="flag-ca" data-value="English" href="javascript:void(0);"><img src="{{ Vite::asset('resources/style/images/flag-ca.svg') }}" class="flag-width" alt="flag"> English</a>
                     </div>
                 </div>
             </li>
@@ -216,8 +205,8 @@
     </header>
 </div>
 <!--  END NAVBAR  -->
-@endsection
-<!-- START GLOBAL MANDATORY SCRIPTS -->
+@show
+
 @section('scripts')
 <script src="{{ Vite::asset('resources/admin_panel_style/js/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ Vite::asset('resources/admin_panel_style/js/popper.min.js') }}"></script>
@@ -235,8 +224,4 @@
 
 <!--  BEGIN CUSTOM SCRIPTS FILE  -->
 <script src="{{ Vite::asset('resources/admin_panel_style/js/mailbox-char.js') }}"></script>
-@endsection
-<!--  END CUSTOM SCRIPTS FILE  -->
-</body>
-
-</html>
+@show
