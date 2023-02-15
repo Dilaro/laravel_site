@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('void');
 });
+Route::get('/admin/slider', function () {
+    return view('slider');
+});
