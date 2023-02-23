@@ -54,28 +54,28 @@
                 </a>
                 <ul class="submenu recent-submenu mini-recent-submenu list-unstyled collapse show" id="mainpage" data-parent="#accordionExample">
                     <li>
-                        <a href="admin/slider"> Слайдер </a>
+                        <a href="/slider"> Слайдер </a>
                     </li>
                     <li>
-                        <a href="#"> Анимированный текст </a>
+                        <a href="/animated"> Анимированный текст </a>
                     </li>
                     <li>
-                        <a href="#"> Экскурсия </a>
+                        <a href="/excursion"> Экскурсия </a>
                     </li>
                     <li>
-                        <a href="#"> Галерея </a>
+                        <a href="/gallery"> Галерея </a>
                     </li>
                     <li>
-                        <a href="#"> Видео </a>
+                        <a href="/video"> Видео </a>
                     </li>
                     <li>
-                        <a href="#"> Новости </a>
+                        <a href="/news"> Новости </a>
                     </li>
                     <li>
-                        <a href="#"> О компании </a>
+                        <a href="/about_company"> О компании </a>
                     </li>
                     <li>
-                        <a href="#"> Диаграммы </a>
+                        <a href="/diagrams"> Диаграммы </a>
                     </li>
                 </ul>
             </li>
