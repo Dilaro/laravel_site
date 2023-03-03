@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AnimationController;
+use App\Http\Controllers\ExcursionController;
 use App\Http\Controllers\SliderController;
 use App\Models\Animation;
+use App\Models\Excursion;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +34,7 @@ Route::get('/slider/{id}', [SliderController::class, 'searchId'])->name('slideri
 Route::post('/slider/{id}/update', [SliderController::class, 'editData'])->name('slideridup');
 Route::get('/slider/{id}/delete', [SliderController::class, 'deleteData'])->name('slideriddel');
 
+
 Route::get('/animated', function(){
     return view('animated_text', ['data' => Animation::all()]);
 });
@@ -41,10 +44,15 @@ Route::post('/animated/{id}/update', [AnimationController::class, 'editData'])->
 Route::get('/animated/{id}/delete', [AnimationController::class, 'deleteData'])->name('animatediddel');
 
 
-
-Route::get('/excursion', function () {
-    return view('excursion');
+Route::get('/excursion', function(){
+    return view('excursion', ['data' => Excursion::all()]);
 });
+Route::post('/excursions', [ExcursionController::class, 'addData'])->name('excursions.addData');
+Route::get('/excursion/{id}', [ExcursionController::class, 'searchId'])->name('excursionid');
+Route::post('/excursion/{id}/update', [ExcursionController::class, 'editData'])->name('excursionidup');
+Route::get('/excursion/{id}/delete', [ExcursionController::class, 'deleteData'])->name('excursioniddel');
+
+
 Route::get('/gallery', function () {
     return view('gallery');
 });
