@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AnimationController;
 use App\Http\Controllers\SliderController;
+use App\Models\Animation;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
@@ -21,17 +23,25 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('void');
 });
+
 Route::get('/slider', function () {
-    return view('slider');
+    return view('slider', ['data' => Slider::all()]);
 });
+Route::post('/sliders', [SliderController::class, 'addData'])->name('sliders.addData');
+Route::get('/slider/{id}', [SliderController::class, 'searchId'])->name('sliderid');
+Route::post('/slider/{id}/update', [SliderController::class, 'editData'])->name('slideridup');
+Route::get('/slider/{id}/delete', [SliderController::class, 'deleteData'])->name('slideriddel');
 
-Route::post('/sliders', [SliderController::class, 'abc'])->name('sliders.abc');
-
-
-
-Route::get('/animated', function () {
-    return view('animated_text');
+Route::get('/animated', function(){
+    return view('animated_text', ['data' => Animation::all()]);
 });
+Route::post('/animations', [AnimationController::class, 'addData'])->name('animations.addData');
+Route::get('/animated/{id}', [AnimationController::class, 'searchId'])->name('animatedid');
+Route::post('/animated/{id}/update', [AnimationController::class, 'editData'])->name('animatedidup');
+Route::get('/animated/{id}/delete', [AnimationController::class, 'deleteData'])->name('animatediddel');
+
+
+
 Route::get('/excursion', function () {
     return view('excursion');
 });
