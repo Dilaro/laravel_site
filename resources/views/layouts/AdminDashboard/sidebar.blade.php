@@ -75,7 +75,7 @@
                         <a href="/about_company"> О компании </a>
                     </li>
                     <li>
-                        <a href="/diagrams"> Диаграммы </a>
+                        <a href="/diagram"> Диаграммы </a>
                     </li>
                 </ul>
             </li>

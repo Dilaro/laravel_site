@@ -30,13 +30,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="post">
+                                        <form method="post" enctype="multipart/form-data"
+                                              action="{{ route('diagramidup', $data->id) }}">
+                                            @csrf
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
                                                 <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
+                                                <input id="t-text" type="text" name="title" value="{{$data->title}}"
+                                                       placeholder="Какой-то текст..." class="form-control" required>
                                             </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -50,13 +52,12 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
-                                        <form method="post">
-                                            <div class="form-group form-align">
-                                                <p>Введите ваш текст ниже.</p>
-                                                <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                            </div>
-                                        </form>
+                                        <div class="form-group form-align">
+                                            <p>Введите ваш текст ниже.</p>
+                                            <label for="t-text" class="sr-only">Text</label>
+                                            <input id="t-text" type="text" name="subtitle" value="{{$data->subtitle}}"
+                                                   placeholder="Какой-то текст..." class="form-control" required>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -71,13 +72,12 @@
                                 <div class="widget-content widget-content-area">
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mx-auto">
-                                            <form method="post">
-                                                <div class="form-group form-align">
-                                                    <p>Введите ваш текст ниже.</p>
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                                </div>
-                                            </form>
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_first_diagram" value="{{$data->text_first_diagram}}"
+                                                       placeholder="Какой-то текст..." class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -93,13 +93,12 @@
                                 <div class="widget-content widget-content-area">
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mx-auto">
-                                            <form method="post">
-                                                <div class="form-group form-align">
-                                                    <p>Введите ваш текст ниже.</p>
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                                </div>
-                                            </form>
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_second_diagram" value="{{$data->text_second_diagram}}"
+                                                       placeholder="Какой-то текст..." class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,13 +114,12 @@
                                 <div class="widget-content widget-content-area">
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mx-auto">
-                                            <form method="post">
-                                                <div class="form-group form-align">
-                                                    <p>Введите ваш текст ниже.</p>
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                                </div>
-                                            </form>
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_third_diagram" value="{{$data->text_third_diagram}}"
+                                                       placeholder="Какой-то текст..." class="form-control" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,13 +135,13 @@
                                 <div class="widget-content widget-content-area">
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mx-auto">
-                                            <form method="post">
-                                                <div class="form-group form-align">
-                                                    <p>Введите ваш текст ниже.</p>
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                                </div>
-                                            </form>
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_fourth_diagram" value="{{$data->text_fourth_diagram}}"
+                                                       placeholder="Какой-то текст..." class="form-control"
+                                                       required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -159,13 +157,16 @@
                                 <div class="widget-content widget-content-area">
                                     <div class="row">
                                         <div class="col-lg-6 col-12 mx-auto">
-                                            <form method="post">
-                                                <div class="form-group form-align">
-                                                    <p>Введите ваш текст ниже.</p>
-                                                    <label for="t-text" class="sr-only">Text</label>
-                                                    <input id="t-text" type="text" name="txt" placeholder="Какой-то текст..." class="form-control" required>
-                                                    <input type="submit" name="txt" class="mt-4 btn btn-primary">
-                                                </div>
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_under_diagrams" value="{{$data->text_under_diagrams}}"
+                                                       placeholder="Какой-то текст..." class="form-control"
+                                                       required>
+                                                <a href="{{route('diagramidup', $data->id)}}">
+                                                    <input type="submit" name="submit" class="mt-4 btn btn-primary">
+                                                </a>
+                                            </div>
                                             </form>
                                         </div>
                                     </div>
@@ -175,6 +176,6 @@
                     </div>
                 </div>
             </div>
-            <!--  END CONTENT AREA  -->
         </div>
+    </div>
 @endsection

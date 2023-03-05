@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AnimationController;
+use App\Http\Controllers\DiagramController;
 use App\Http\Controllers\ExcursionController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
 use App\Models\Animation;
+use App\Models\Diagram;
 use App\Models\Excursion;
 use App\Models\News;
 use App\Models\Slider;
@@ -80,10 +82,15 @@ Route::post('/news/{id}/update', [NewsController::class, 'editData'])->name('new
 Route::get('/news/{id}/delete', [NewsController::class, 'deleteData'])->name('newsiddel');
 
 
-
 Route::get('/about_company', function () {
     return view('about_company');
 });
-Route::get('/diagrams', function () {
-    return view('diagrams');
+
+
+Route::get('/diagram', function(){
+    return view('diagram', ['data' => Diagram::all()]);
 });
+Route::post('/diagrams', [DiagramController::class, 'addData'])->name('diagrams.addData');
+Route::get('/diagram/{id}', [DiagramController::class, 'searchId'])->name('diagramid');
+Route::post('/diagram/{id}/update', [DiagramController::class, 'editData'])->name('diagramidup');
+Route::get('/diagram/{id}/delete', [DiagramController::class, 'deleteData'])->name('diagramiddel');

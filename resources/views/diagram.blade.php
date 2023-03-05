@@ -10,12 +10,12 @@
                     <div id="navSection" data-spy="affix" class="nav sidenav">
                         <div class="sidenav-content">
                             <a href="#title" class="nav-link">Заголовок</a>
-                            <a href="#beforeText" class="nav-link">Текст перед анимированным</a>
-                            <a href="#underTitle" class="nav-link">Анимированный текст</a>
-                            <a href="#miniTitle1" class="nav-link">Мини-заголовок 1</a>
-                            <a href="#text1" class="nav-link">Текст 1</a>
-                            <a href="#miniTitle2" class="nav-link">Мини-заголовок 2</a>
-                            <a href="#text2" class="nav-link">Текст 2</a>
+                            <a href="#underTitle" class="nav-link">Подзаголовок</a>
+                            <a href="#diagram1" class="nav-link">Диаграмма 1</a>
+                            <a href="#diagram2" class="nav-link">Диаграмма 2</a>
+                            <a href="#diagram3" class="nav-link">Диаграмма 3</a>
+                            <a href="#diagram4" class="nav-link">Диаграмма 4</a>
+                            <a href="#text" class="nav-link">Текст под диаграммами</a>
                         </div>
                     </div>
                     <div class="row layout-top-spacing">
@@ -31,7 +31,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
                                         <form method="post" enctype="multipart/form-data"
-                                              action="{{ route('animations.addData', 'animatedid') }}">
+                                              action="{{ route('diagrams.addData', 'diagramid') }}">
                                             @csrf
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
@@ -42,31 +42,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="beforeText" class="col-lg-12 layout-spacing">
-                                <div class="widget-header">
-                                    <div class="row">
-                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст перед анимированным</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-12 mx-auto">
-                                        <div class="form-group form-align">
-                                            <p>Введите ваш текст ниже.</p>
-                                            <label for="t-text" class="sr-only">Text</label>
-                                            <input id="t-text" type="text" name="text_before"
-                                                   placeholder="Какой-то текст..."
-                                                   class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div id="underTitle" class="col-lg-12 layout-spacing">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Анимированный текст</h4>
+                                            <h4>Подзаголовок</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -75,18 +55,17 @@
                                         <div class="form-group form-align">
                                             <p>Введите ваш текст ниже.</p>
                                             <label for="t-text" class="sr-only">Text</label>
-                                            <input id="t-text" type="text" name="text_anim"
-                                                   placeholder="Какой-то текст..."
-                                                   class="form-control" required>
+                                            <input id="t-text" type="text" name="subtitle"
+                                                   placeholder="Какой-то текст..." class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="miniTitle1" class="col-lg-12 layout-spacing">
+                            <div id="diagram1" class="col-lg-12 layout-spacing">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Мини-заголовок 1</h4>
+                                            <h4>Текст диаграммы 1</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -96,18 +75,18 @@
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
                                                 <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="left_subtitle"
+                                                <input id="t-text" type="text" name="text_first_diagram"
                                                        placeholder="Какой-то текст..." class="form-control" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="text1" class="col-lg-12 layout-spacing">
+                            <div id="diagram2" class="col-lg-12 layout-spacing">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст мини-заголовка 1</h4>
+                                            <h4>Текст диаграммы 2</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -117,18 +96,18 @@
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
                                                 <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="text_left_subtitle"
+                                                <input id="t-text" type="text" name="text_second_diagram"
                                                        placeholder="Какой-то текст..." class="form-control" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="miniTitle2" class="col-lg-12 layout-spacing">
+                            <div id="diagram3" class="col-lg-12 layout-spacing">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Мини-заголовок 2</h4>
+                                            <h4>Текст диаграммы 3</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -138,18 +117,18 @@
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
                                                 <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="right_subtitle"
+                                                <input id="t-text" type="text" name="text_third_diagram"
                                                        placeholder="Какой-то текст..." class="form-control" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="text2" class="col-lg-12 layout-spacing">
+                            <div id="diagram4" class="col-lg-12 layout-spacing">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст мини-заголовка 2</h4>
+                                            <h4>Текст диаграммы 4</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -159,12 +138,35 @@
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
                                                 <label for="t-text" class="sr-only">Text</label>
-                                                <input id="t-text" type="text" name="text_right_subtitle"
-                                                       placeholder="Какой-то текст..." class="form-control" required>
-                                                <input type="submit" name="button" class="mt-4 btn btn-primary">
+                                                <input id="t-text" type="text" name="text_fourth_diagram"
+                                                       placeholder="Какой-то текст..." class="form-control"
+                                                       required>
                                             </div>
                                         </div>
-                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="text" class="col-lg-12 layout-spacing">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Текст под диаграммами</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12 mx-auto">
+                                            <div class="form-group form-align">
+                                                <p>Введите ваш текст ниже.</p>
+                                                <label for="t-text" class="sr-only">Text</label>
+                                                <input id="t-text" type="text" name="text_under_diagrams"
+                                                       placeholder="Какой-то текст..." class="form-control"
+                                                       required>
+                                                <input type="submit" name="submit" class="mt-4 btn btn-primary">
+                                            </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -193,17 +195,18 @@
                     @foreach($data as $el)
                         <tr>
                             <td>{{ $el->title}}</td>
-                            <td>{{ $el->text_before}}</td>
-                            <td>{{ $el->text_anim}}</td>
-                            <td>{{ $el->left_subtitle}}</td>
-                            <td>{{ $el->right_subtitle}}</td>
+                            <td>{{ $el->subtitle}}</td>
+                            <td>{{ $el->text_first_diagram}}</td>
+                            <td>{{ $el->text_second_diagram}}</td>
+                            <td>{{ $el->text_third_diagram}}</td>
                             <td>{{ $el->text_left_subtitle}}</td>
-                            <td>{{ $el->text_right_subtitle}}</td>
+                            <td>{{ $el->text_fourth_diagram}}</td>
+                            <td>{{ $el->text_under_diagrams}}</td>
                             <td>
-                                <a href="{{route('animatedid', $el->id)}}">
+                                <a href="{{route('diagramid', $el->id)}}">
                                     <button class="mt-4 mb-4 btn btn-primary">Редактировать</button>
                                 </a>
-                                <a href="{{route('animatediddel', $el->id)}}">
+                                <a href="{{route('diagramiddel', $el->id)}}">
                                     <button class="mt-4 mb-4 btn btn-primary">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                              viewBox="0 0 24 24" fill="none" stroke="currentColor"
