@@ -11,7 +11,7 @@
                         <div class="sidenav-content">
                             <a href="#title" class="nav-link">Заголовок</a>
                             <a href="#underTitle" class="nav-link">Текст</a>
-                            <a href="#photo" class="nav-link">Фото</a>
+                            <a href="#video" class="nav-link">Видео</a>
                         </div>
                     </div>
                     <div class="row layout-top-spacing">
@@ -19,7 +19,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Заголовок</h4>
+                                        <h4>Заголовок (отобразиться поверх видео)</h4>
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mx-auto">
                                         <form method="post" enctype="multipart/form-data"
-                                              action="{{route('excursionidup', $data->id)}}">
+                                              action="{{ route('videoidup', $data->id) }}">
                                             @csrf
                                             <div class="form-group form-align">
                                                 <p>Введите ваш текст ниже.</p>
@@ -43,7 +43,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Текст</h4>
+                                        <h4>Текст (отобразится под заголовком)</h4>
                                     </div>
                                 </div>
                             </div>
@@ -53,18 +53,18 @@
                                         <div class="form-group form-align">
                                             <p>Введите ваш текст ниже.</p>
                                             <label for="t-text" class="sr-only">Text</label>
-                                            <input id="t-text" type="text" name="text_down" placeholder="Какой-то текст..."
-                                                   class="form-control" value="{{$data->text_down}}" required>
+                                            <input id="t-text" type="text" name="text_down" value="{{$data->text_down}}"
+                                                   placeholder="Какой-то текст..." class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="photo" class="col-lg-12 layout-spacing">
+                        <div id="video" class="col-lg-12 layout-spacing">
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Загрузка фото</h4>
+                                        <h4>Загрузка видео</h4>
                                     </div>
                                 </div>
                             </div>
@@ -73,18 +73,15 @@
                                     <div class="col-lg-6 col-12 mx-auto">
                                         <div class="form-group form-align">
                                             <div class="custom-file-container" data-upload-id="myFirstImage">
-                                                <label>Загрузить (одно фото) <a href="javascript:void(0)"
-                                                                                class="custom-file-container__image-clear"
-                                                                                title="Clear Image">x</a></label>
-                                                <label class="custom-file-container__custom-file">
-                                                    <input type="file" class="custom-file-container__custom-file__custom-file-input"
-                                                           accept="image/*" name="image">
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
+                                                <label>Загрузить (одно видео) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                                <label class="custom-file-container__custom-file" >
+                                                    <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                                                     <span class="custom-file-container__custom-file__custom-file-control">Выберите файл...
                                                     <span class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>
                                                     </span>
                                                 </label>
-                                                <a href="{{route('excursionidup', $data->id)}}">
+                                                <a href="{{route('videoidup', $data->id)}}">
                                                     <input type="submit" name="button" class="mt-4 btn btn-primary">
                                                 </a>
                                                 </form>

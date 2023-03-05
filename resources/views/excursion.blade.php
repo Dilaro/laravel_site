@@ -70,20 +70,26 @@
                                 </div>
                             </div>
                             <div class="widget-content widget-content-area">
-                                <div class="custom-file-container" data-upload-id="myFirstImage">
-                                    <label>Загрузить (одно фото) <a href="javascript:void(0)"
-                                                                    class="custom-file-container__image-clear"
-                                                                    title="Clear Image">x</a></label>
-                                    <label class="custom-file-container__custom-file">
-                                        <input type="file" class="custom-file-container__custom-file__custom-file-input"
-                                               accept="image/*" name="image">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
-                                        <span class="custom-file-container__custom-file__custom-file-control">Выберите файл...
-                                        <span class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>
-                                        </span>
-                                    </label>
-                                    <input type="submit" name="button" class="mt-4 btn btn-primary">
-                                    </form>
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mx-auto">
+                                        <div class="form-group form-align">
+                                            <div class="custom-file-container" data-upload-id="myFirstImage">
+                                                <label>Загрузить (одно фото) <a href="javascript:void(0)"
+                                                                                class="custom-file-container__image-clear"
+                                                                                title="Clear Image">x</a></label>
+                                                <label class="custom-file-container__custom-file">
+                                                    <input type="file" class="custom-file-container__custom-file__custom-file-input"
+                                                           accept="image/*" name="image">
+                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
+                                                    <span class="custom-file-container__custom-file__custom-file-control">Выберите файл...
+                                                    <span class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>
+                                                    </span>
+                                                </label>
+                                                <input type="submit" name="button" class="mt-4 btn btn-primary">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

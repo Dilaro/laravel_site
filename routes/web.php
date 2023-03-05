@@ -3,9 +3,11 @@
 use App\Http\Controllers\AnimationController;
 use App\Http\Controllers\ExcursionController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\VideoController;
 use App\Models\Animation;
 use App\Models\Excursion;
 use App\Models\Slider;
+use App\Models\Video;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,9 +58,17 @@ Route::get('/excursion/{id}/delete', [ExcursionController::class, 'deleteData'])
 Route::get('/gallery', function () {
     return view('gallery');
 });
-Route::get('/video', function () {
-    return view('video');
+
+
+Route::get('/video', function(){
+    return view('video', ['data' => Video::all()]);
 });
+Route::post('/videos', [VideoController::class, 'addData'])->name('videos.addData');
+Route::get('/video/{id}', [VideoController::class, 'searchId'])->name('videoid');
+Route::post('/video/{id}/update', [VideoController::class, 'editData'])->name('videoidup');
+Route::get('/video/{id}/delete', [VideoController::class, 'deleteData'])->name('videoiddel');
+
+
 Route::get('/news', function () {
     return view('news');
 });
