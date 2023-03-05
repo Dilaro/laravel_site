@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\AnimationController;
 use App\Http\Controllers\ExcursionController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
 use App\Models\Animation;
 use App\Models\Excursion;
+use App\Models\News;
 use App\Models\Slider;
 use App\Models\Video;
 use Illuminate\Support\Facades\Route;
@@ -69,9 +71,16 @@ Route::post('/video/{id}/update', [VideoController::class, 'editData'])->name('v
 Route::get('/video/{id}/delete', [VideoController::class, 'deleteData'])->name('videoiddel');
 
 
-Route::get('/news', function () {
-    return view('news');
+Route::get('/news', function(){
+    return view('news', ['data' => News::all()]);
 });
+Route::post('/newss', [NewsController::class, 'addData'])->name('newss.addData');
+Route::get('/news/{id}', [NewsController::class, 'searchId'])->name('newsid');
+Route::post('/news/{id}/update', [NewsController::class, 'editData'])->name('newsidup');
+Route::get('/news/{id}/delete', [NewsController::class, 'deleteData'])->name('newsiddel');
+
+
+
 Route::get('/about_company', function () {
     return view('about_company');
 });
