@@ -114,7 +114,7 @@
                         <tr>
                             <td>{{ $el->title }}</td>
                             <td>{{ $el->text_down }}</td>
-                            <td><img width="150" height="100" src="{{ Vite::asset('public/' . $el->image) }}"
+                            <td><img width="150" height="100" src="{{ Vite::asset('storage/app/public/' . $el->image) }}"
                                      alt="photo db"></td>
                             <td>
                                 <a href="{{route('excursionid', $el->id)}}">

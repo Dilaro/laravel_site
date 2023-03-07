@@ -73,20 +73,19 @@
                                     <div class="col-lg-6 col-12 mx-auto">
                                         <div class="form-group form-align">
                                             <div class="custom-file-container" data-upload-id="myFirstImage">
-                                                <label>Загрузить (одно видео) <a href="javascript:void(0)"
-                                                                                 class="custom-file-container__image-clear"
-                                                                                 title="Clear Image">x</a></label>
-                                                <label class="custom-file-container__custom-file">
-                                                    <input type="file"
-                                                           class="custom-file-container__custom-file__custom-file-input"
-                                                           name="video" accept="image/*">
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
-                                                    <span
-                                                        class="custom-file-container__custom-file__custom-file-control">Выберите файл...
-                                                    <span
-                                                        class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>
-                                                    </span>
-                                                </label>
+{{--                                                <label>Загрузить (одно видео) <a href="javascript:void(0)"--}}
+{{--                                                                                 class="custom-file-container__image-clear"--}}
+{{--                                                                                 title="Clear Image">x</a></label>--}}
+                                                <input type="file" name="video" class="form-control-file" id="exampleFormControlFile1">
+{{--                                                <label class="custom-file-container__custom-file">--}}
+{{--                                                    <input type="file" class="form-control-file" name="video" id="exampleFormControlFile1">--}}
+{{--                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>--}}
+{{--                                                    <span--}}
+{{--                                                        class="custom-file-container__custom-file__custom-file-control">Выберите файл...--}}
+{{--                                                    <span--}}
+{{--                                                        class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>--}}
+{{--                                                    </span>--}}
+{{--                                                </label>--}}
                                                 <input type="submit" name="button" class="mt-4 btn btn-primary">
                                                 </form>
                                             </div>
@@ -115,8 +114,9 @@
                         <tr>
                             <td>{{ $el->title }}</td>
                             <td>{{ $el->text_down }}</td>
-                            <td><img width="150" height="100" src="{{ Vite::asset('public/' . $el->video) }}"
-                                     alt="photo db"></td>
+                            <td><img width="150" height="100"
+                                     src="{{ Vite::asset('storage/app/public/' . $el->video) }}"
+                                     alt="video db"></td>
                             <td>
                                 <a href="{{route('videoid', $el->id)}}">
                                     <button class="mt-4 mb-4 btn btn-primary">

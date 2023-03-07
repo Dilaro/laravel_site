@@ -19,7 +19,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Заголовок (отобразиться поверх видео)</h4>
+                                        <h4>Редактирование заголовока (отобразиться поверх видео)</h4>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Текст (отобразится под заголовком)</h4>
+                                        <h4>Редактирование текста (отобразится под заголовком)</h4>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Загрузка видео</h4>
+                                        <h4>Редактирование видео</h4>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                             <div class="custom-file-container" data-upload-id="myFirstImage">
                                                 <label>Загрузить (одно видео) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
                                                 <label class="custom-file-container__custom-file" >
-                                                    <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                                                    <input type="file" class="custom-file-container__custom-file__custom-file-input">
                                                     <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                                                     <span class="custom-file-container__custom-file__custom-file-control">Выберите файл...
                                                     <span class="custom-file-container__custom-file__custom-file-control__button">Смотреть</span>

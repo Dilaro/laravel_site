@@ -24,7 +24,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Заголовок</h4>
+                                            <h4>Редактирование заголовка</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Подзаголовок</h4>
+                                            <h4>Редактирование подзаголовка</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст диаграммы 1</h4>
+                                            <h4>Редактирование текста диаграммы 1</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст диаграммы 2</h4>
+                                            <h4>Редактирование текста диаграммы 2</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст диаграммы 3</h4>
+                                            <h4>Редактирование текста диаграммы 3</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст диаграммы 4</h4>
+                                            <h4>Редактирование текста диаграммы 4</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +150,7 @@
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Текст под диаграммами</h4>
+                                            <h4>Редактирование текста под диаграммами</h4>
                                         </div>
                                     </div>
                                 </div>

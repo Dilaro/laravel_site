@@ -19,7 +19,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Заголовок новости</h4>
+                                        <h4>Редактирование заголовка новости</h4>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Текст новости</h4>
+                                        <h4>Редактирование текста новости</h4>
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Загрузка фото новости</h4>
+                                        <h4>Редактирование фото новости</h4>
                                     </div>
                                 </div>
                             </div>

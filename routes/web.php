@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\AnimationController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DiagramController;
 use App\Http\Controllers\ExcursionController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VideoController;
 use App\Models\Animation;
+use App\Models\Company;
 use App\Models\Diagram;
 use App\Models\Excursion;
 use App\Models\News;
@@ -82,9 +84,13 @@ Route::post('/news/{id}/update', [NewsController::class, 'editData'])->name('new
 Route::get('/news/{id}/delete', [NewsController::class, 'deleteData'])->name('newsiddel');
 
 
-Route::get('/about_company', function () {
-    return view('about_company');
+Route::get('/about_company', function(){
+    return view('about_company', ['data' => Company::all()]);
 });
+Route::post('/about_companies', [CompanyController::class, 'addData'])->name('companies.addData');
+Route::get('/about_company/{id}', [CompanyController::class, 'searchId'])->name('companyid');
+Route::post('/about_company/{id}/update', [CompanyController::class, 'editData'])->name('companyidup');
+Route::get('/about_company/{id}/delete', [CompanyController::class, 'deleteData'])->name('companyiddel');
 
 
 Route::get('/diagram', function(){
